@@ -2,8 +2,8 @@
 
 file = readLines(list.files(pattern = "\\.Rmd|\\.rmd")[1])
 
-tmp = grep("geom_bar|geom_col", file)
+tmp = grep("geom_bar|geom_col|barplot", file)
 
-stopifnot(length(tmp[length(tmp)] - tmp[1] > 10)!=0)
+stopifnot(tmp[length(tmp)] - tmp[1] > 10)
 
 
